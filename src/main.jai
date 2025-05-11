@@ -168,7 +168,7 @@ spawn_drop :: () {
 
         active = true;
         position.x = random_get_zero_to_one() * 0.9 + 0.05;
-        position.y = 1;
+        position.y = playfield_height / playfield_width.(float) + size.y;
         return;
     }
     assert(false, "Ran out of inactive drop entities.");
